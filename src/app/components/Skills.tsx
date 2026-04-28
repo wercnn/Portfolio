@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Code2, Database, Layout, GitBranch, Palette, Globe, Server, Smartphone, Package, Terminal, Braces, FileCode, Box, Network } from "lucide-react";
+import { Code2, Database, Layout, GitBranch, Palette, Globe, Server, Terminal, Braces, FileCode, Box, Network, Zap, Layers } from "lucide-react";
 
 const skillCategories = [
   {
@@ -8,31 +8,32 @@ const skillCategories = [
       { name: "Java", icon: Code2 },
       { name: "Python", icon: Terminal },
       { name: "JavaScript", icon: Braces },
+      { name: "TypeScript", icon: FileCode },
       { name: "HTML/CSS", icon: Layout },
-      { name: "PHP", icon: FileCode },
+      { name: "PHP", icon: Code2 },
       { name: "SQL", icon: Database },
     ],
   },
   {
     category: "Frameworks & Tools",
     skills: [
+      { name: "React", icon: Globe },
+      { name: "Node.js", icon: Server },
+      { name: "Vite", icon: Zap },
+      { name: "React Router", icon: Network },
       { name: "Swing", icon: Code2 },
-      { name: "Tkinter", icon: Terminal },
-      { name: "MySQL", icon: Database },
-      { name: "Git/GitHub", icon: GitBranch },
-      { name: "Docker", icon: Box },
-      { name: "Oracle SQL*Plus", icon: Database },
+      { name: "Tailwind CSS", icon: Palette },
     ],
   },
   {
-    category: "Skills & Design",
+    category: "Tools & Platforms",
     skills: [
-      { name: "OOP", icon: Code2 },
-      { name: "Web Dev", icon: Globe },
-      { name: "Responsive", icon: Smartphone },
-      { name: "UI/UX", icon: Palette },
-      { name: "Databases", icon: Network },
-      { name: "Problem Solving", icon: Server },
+      { name: "Git/GitHub", icon: GitBranch },
+      { name: "MySQL", icon: Database },
+      { name: "Docker", icon: Box },
+      { name: "Figma", icon: Layers },
+      { name: "REST APIs", icon: Globe },
+      { name: "GitHub Actions", icon: GitBranch },
     ],
   },
 ];

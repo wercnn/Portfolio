@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
 
 export function Hero() {
   const scrollToAbout = () => {
@@ -62,36 +62,44 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="flex flex-wrap gap-4 justify-center"
+            className="flex flex-col items-center gap-4"
           >
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a
+                href="#projects"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
+              >
+                Get In Touch
+              </a>
+            </div>
+            <div className="flex flex-col items-center gap-1">
+              <a
+                href={`${import.meta.env.BASE_URL}YigitErenDoganResume.pdf`}
+                download
+                className="flex items-center gap-2 px-6 py-3 text-white/80 hover:text-white border border-white/20 hover:border-white/50 rounded-lg font-medium transition-all duration-300 hover:bg-white/10"
+              >
+                <Download size={18} />
+                Download CV
+              </a>
+              <span className="text-white/40 text-xs">Last updated · April 2026</span>
+            </div>
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 1 }}
+              onClick={scrollToAbout}
+              className="mt-2 text-white/60 hover:text-white transition-colors cursor-pointer animate-bounce"
+              aria-label="Scroll down"
             >
-              View My Work
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              Get In Touch
-            </a>
+              <ArrowDown size={32} />
+            </motion.button>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <button
-            onClick={scrollToAbout}
-            className="text-white/60 hover:text-white transition-colors cursor-pointer animate-bounce"
-            aria-label="Scroll down"
-          >
-            <ArrowDown size={32} />
-          </button>
         </motion.div>
       </div>
     </section>

@@ -4,11 +4,27 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const projects = [
   {
+    title: "Happy Tails",
+    description: "Full-stack platform connecting pet owners with verified pet minders, built as a team for the Software Engineering module. Features two React front ends — a mobile web app and an admin dashboard — backed by a Node.js HTTP API and a normalised MySQL schema covering bookings, payments, reviews, disputes, and messaging.",
+    image: "https://images.unsplash.com/photo-1450778869180-41d0601e046e?fit=max&fm=jpg&q=80&w=1080",
+    tags: ["React 19", "Node.js", "MySQL", "REST API", "Vite"],
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "CycleCast",
+    description: "Cycling-focused weather web app for student bike commuters. Surfaces a Cycling Suitability Score, commute-hour rain probability, wind speed, road conditions, clothing recommendations, and real-time hazard alerts — built from a Figma design with OpenWeather API integration.",
+    image: "https://github.com/user-attachments/assets/e4dae9f0-6e8e-4d66-b4eb-15ff5776e77b",
+    tags: ["TypeScript", "React", "Vite", "OpenWeather API"],
+    liveUrl: "#",
+    githubUrl: "https://github.com/wercnn/Cyclecast",
+  },
+  {
     title: "Horse Racing Simulator",
     description: "Interactive GUI-based horse racing simulation game with animated race progress, betting system, and dynamic race outcomes built with Java Swing",
     image: "https://images.unsplash.com/photo-1580974582235-4996ef109bbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxob3JzZSUyMHJhY2luZyUyMHNwb3J0fGVufDF8fHx8MTc3MTYwMDI2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Java", "Swing GUI", "OOP"],
-    liveUrl: "https://github.com/wercnn/HorseRace_Sim",
+    tags: ["Java", "Swing", "OOP"],
+    liveUrl: "#",
     githubUrl: "https://github.com/wercnn/HorseRace_Sim",
   },
   {
@@ -66,20 +82,28 @@ export function Projects() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center gap-4 pb-6">
-                  <a
-                    href={project.liveUrl}
-                    className="p-3 bg-white rounded-full hover:bg-purple-500 hover:text-white transition-colors"
-                    aria-label="View live demo"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    className="p-3 bg-white rounded-full hover:bg-purple-500 hover:text-white transition-colors"
-                    aria-label="View source code"
-                  >
-                    <Github size={20} />
-                  </a>
+                  {project.liveUrl !== "#" && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+                      aria-label="View live demo"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
+                  {project.githubUrl !== "#" && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-white rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+                      aria-label="View source code"
+                    >
+                      <Github size={20} />
+                    </a>
+                  )}
                 </div>
               </div>
 

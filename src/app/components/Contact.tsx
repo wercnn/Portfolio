@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 
 const contactInfo = [
@@ -27,17 +27,12 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/yigiterendogan",
+    href: "https://github.com/wercnn",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
     href: "https://linkedin.com/in/yigit-eren-dogan",
-  },
-  {
-    icon: Twitter,
-    label: "Twitter",
-    href: "https://twitter.com",
   },
 ];
 
@@ -47,13 +42,26 @@ export function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setStatus("submitting");
+    try {
+      const res = await fetch("https://formspree.io/f/xbdqvvwj", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const handleChange = (
@@ -133,6 +141,8 @@ export function Contact() {
                     <motion.a
                       key={social.label}
                       href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
@@ -207,12 +217,24 @@ export function Contact() {
 
               <motion.button
                 type="submit"
+                disabled={status === "submitting"}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+                className="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
+                {status === "submitting" ? "Sending..." : "Send Message"}
               </motion.button>
+
+              {status === "success" && (
+                <p className="text-green-400 text-sm text-center">
+                  Message sent — I'll get back to you soon!
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-red-400 text-sm text-center">
+                  Something went wrong. Please try emailing me directly.
+                </p>
+              )}
             </form>
           </motion.div>
         </div>

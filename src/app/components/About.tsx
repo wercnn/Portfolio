@@ -84,7 +84,7 @@ export function About() {
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
                 I'm currently pursuing a Bachelor of Science in Computer Science at Queen Mary University of London, 
-                where I'm maintaining a First Class Honours with an average of 79.8%. My academic journey has given me 
+                where I'm maintaining a First Class Honours classification. My academic journey has given me 
                 a strong foundation in programming, algorithms, and software development.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
