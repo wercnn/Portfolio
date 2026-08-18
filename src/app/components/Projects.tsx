@@ -9,7 +9,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1450778869180-41d0601e046e?fit=max&fm=jpg&q=80&w=1080",
     tags: ["React 19", "Node.js", "MySQL", "REST API", "Vite"],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/wercnn/Happy_Tails",
   },
   {
     title: "CycleCast",
