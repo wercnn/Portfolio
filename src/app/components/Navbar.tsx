@@ -43,7 +43,7 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             className={`text-2xl font-bold transition-colors ${
               isScrolled
-                ? "text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600"
+                ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600"
                 : "text-white"
             }`}
           >
@@ -56,7 +56,7 @@ export function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className={`font-medium transition-colors hover:text-purple-600 ${
+                className={`font-medium transition-colors hover:text-blue-600 ${
                   isScrolled ? "text-gray-700" : "text-white"
                 }`}
               >
@@ -98,7 +98,7 @@ export function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-gray-700 font-medium hover:text-purple-600 transition-colors py-2"
+                  className="block text-gray-700 font-medium hover:text-blue-600 transition-colors py-2"
                 >
                   {item.label}
                 </motion.a>

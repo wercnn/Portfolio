@@ -9,7 +9,7 @@ export function Footer() {
             © {new Date().getFullYear()} Yigit Eren Dogan. All rights reserved.
           </p>
           <p className="text-gray-400 flex items-center gap-2">
-            Made with <Heart size={16} className="text-pink-500 fill-pink-500" /> and code
+            Made with <Heart size={16} className="text-rose-500 fill-rose-500" /> and code
           </p>
         </div>
       </div>

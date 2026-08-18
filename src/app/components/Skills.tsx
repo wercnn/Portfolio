@@ -65,7 +65,7 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-100"
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-100"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 {category.category}
@@ -86,7 +86,7 @@ export function Skills() {
                       whileHover={{ scale: 1.1, y: -5 }}
                       className="flex flex-col items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group"
                     >
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:rotate-6 transition-transform">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:rotate-6 transition-transform">
                         <Icon className="text-white" size={24} />
                       </div>
                       <span className="text-gray-700 font-medium text-sm text-center">

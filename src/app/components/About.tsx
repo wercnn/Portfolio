@@ -54,9 +54,9 @@ export function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-100 hover:shadow-xl transition-shadow duration-300"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-100 hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
                   <Icon className="text-white" size={28} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -77,7 +77,7 @@ export function About() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-[2px] rounded-2xl">
+          <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-[2px] rounded-2xl">
             <div className="bg-white rounded-2xl p-8 md:p-12">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 My Journey

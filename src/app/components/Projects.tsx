@@ -87,7 +87,7 @@ export function Projects() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-white rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+                      className="p-3 bg-white rounded-full hover:bg-blue-500 hover:text-white transition-colors"
                       aria-label="View live demo"
                     >
                       <ExternalLink size={20} />
@@ -98,7 +98,7 @@ export function Projects() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-white rounded-full hover:bg-purple-500 hover:text-white transition-colors"
+                      className="p-3 bg-white rounded-full hover:bg-blue-500 hover:text-white transition-colors"
                       aria-label="View source code"
                     >
                       <Github size={20} />
@@ -118,7 +118,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"
                     >
                       {tag}
                     </span>
