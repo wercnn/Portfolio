@@ -33,14 +33,14 @@ export function Hero() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+            transition={{ delay: 0.12, duration: 0.5 }}
             className="text-5xl md:text-7xl font-bold text-white mb-6"
           >
             Hi, I'm{" "}
@@ -50,18 +50,18 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.22, duration: 0.5 }}
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
           >
             Computer Science student at Queen Mary University of London, passionate about building innovative software solutions
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
+            transition={{ delay: 0.32, duration: 0.5 }}
             className="flex flex-col items-center gap-4"
           >
             <div className="flex flex-wrap gap-4 justify-center">
@@ -92,7 +92,7 @@ export function Hero() {
             <motion.button
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
               onClick={scrollToAbout}
               className="mt-2 text-white/60 hover:text-white transition-colors cursor-pointer animate-bounce"
               aria-label="Scroll down"

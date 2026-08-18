@@ -77,10 +77,10 @@ export function Contact() {
     <section id="contact" className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+          transition={{ duration: 0.35 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -94,10 +94,10 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+            transition={{ duration: 0.35 }}
             className="space-y-8"
           >
             <div>
@@ -113,8 +113,8 @@ export function Contact() {
                       href={item.href}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+                      transition={{ duration: 0.35, delay: index * 0.05 }}
                       className="flex items-center gap-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 group"
                     >
                       <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -145,8 +145,8 @@ export function Contact() {
                       rel="noopener noreferrer"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+                      transition={{ duration: 0.35, delay: index * 0.05 }}
                       whileHover={{ scale: 1.1 }}
                       className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20 hover:bg-gradient-to-br hover:from-blue-500 hover:to-cyan-500 transition-all duration-300"
                       aria-label={social.label}
@@ -161,10 +161,10 @@ export function Contact() {
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 16 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+            transition={{ duration: 0.35 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

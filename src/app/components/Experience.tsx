@@ -24,10 +24,10 @@ export function Experience() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+          transition={{ duration: 0.35 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
@@ -39,10 +39,10 @@ export function Experience() {
           {experiences.map((experience, index) => (
             <motion.div
               key={`${experience.organization}-${experience.role}`}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+              transition={{ duration: 0.35, delay: index * 0.05 }}
               whileHover={{ y: -6 }}
               className="bg-white p-8 md:p-10 rounded-2xl border border-blue-100 shadow-sm hover:shadow-xl transition-shadow duration-300"
             >

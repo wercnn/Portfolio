@@ -29,10 +29,10 @@ export function About() {
     <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+          transition={{ duration: 0.35 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -49,10 +49,10 @@ export function About() {
             return (
               <motion.div
                 key={skill.title}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+                transition={{ duration: 0.35, delay: index * 0.05 }}
                 whileHover={{ y: -10 }}
                 className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-100 hover:shadow-xl transition-shadow duration-300"
               >
@@ -71,10 +71,10 @@ export function About() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+          transition={{ duration: 0.35, delay: 0.2 }}
           className="mt-16 max-w-4xl mx-auto"
         >
           <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-[2px] rounded-2xl">

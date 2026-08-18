@@ -43,10 +43,10 @@ export function Skills() {
     <section id="skills" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+          transition={{ duration: 0.35 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -61,10 +61,10 @@ export function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.category}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+              viewport={{ once: true, margin: "0px 0px 150px 0px" }}
+              transition={{ duration: 0.35, delay: categoryIndex * 0.05 }}
               className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-100"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
@@ -78,10 +78,10 @@ export function Skills() {
                       key={skill.name}
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true, margin: "0px 0px 150px 0px" }}
                       transition={{
-                        duration: 0.4,
-                        delay: categoryIndex * 0.1 + skillIndex * 0.05,
+                        duration: 0.3,
+                        delay: categoryIndex * 0.05 + skillIndex * 0.05,
                       }}
                       whileHover={{ scale: 1.1, y: -5 }}
                       className="flex flex-col items-center gap-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer group"
